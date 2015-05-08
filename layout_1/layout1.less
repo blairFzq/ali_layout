@@ -1,0 +1,54 @@
+/*定义变量*/
+@c-header:pink;
+@c-footer:orange;
+@c-nav:red;
+@c-pop:blue;
+@c-aircle:blue;
+
+body{
+  margin: 0;
+}
+.header{
+  width:100%;
+  height: 100px;
+  background: @c-header;
+}
+
+.footer{
+  width:100%;
+  height: 100px;
+  background: @c-footer;
+}
+
+.container{
+  height: 400px;
+  width:100%;
+  padding: 20px 0 20px 0;
+  .left{
+        height: 100%;
+        float: left;
+        width:25%;
+        margin-right: 5%;
+        }
+  .nav{
+        height: 60%;
+        margin-bottom: 5%;
+        background:@c-nav;
+  }
+  .pop{
+       height: 35%;
+       background:@c-pop;
+  }
+  .right{
+         float: right;
+         width:70%;
+         height: 100%;
+         background: @c-aircle;
+        }
+  &::after{
+    display: block;
+    height: 0%;
+    content: '';
+    clear: both;
+  }
+}
